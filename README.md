@@ -1,2 +1,1 @@
-# portfolio_gamedev
-Portfolio for game development
+# Portfolio for game development
