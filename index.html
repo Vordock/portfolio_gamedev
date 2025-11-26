@@ -1,61 +1,138 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Saulo Dias | Game Developer</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Saulo Dias — Game Programmer</title>
 
-    <!-- Anti-cache -->
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
+  <!-- Anti-cache -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
 
-    <!-- CSS externo com versionamento -->
-    <link rel="stylesheet" href="style.css?v=1.0.0" />
+  <!-- Basic SEO -->
+  <meta name="description" content="Saulo Dias — Game Programmer. Portfolio focusing on Unity, SOLID and clean architecture.">
+
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css?v=1.0.0">
 </head>
-
 <body>
+  <div class="site">
+    <header>
+      <div class="brand">
+        
+        <!-- FOTO DO SAULO -->
+        <img class="profile-pic" src="assets/foto.jpg" alt="Foto de Saulo Dias">
 
-    <div class="container">
+        <div>
+          <h1>Saulo Dias — Game Programmer</h1>
+          <p class="lead">Unity dev • Clean code • Platforming & systems</p>
+        </div>
+      </div>
 
-        <!-- HEADER -->
-        <div class="profile-card">
-            <img src="https://github.com/USERNAME.png" alt="Foto de perfil">
+      <nav>
+        <a class="btn" href="#games">Games</a>
+        <a class="btn" href="#about">About</a>
+        <a class="btn" href="https://github.com/vordock" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </header>
 
-            <h1>Saulo Dias</h1>
-            <div class="subtitle">Unity Game Developer</div>
-            <p>Desenvolvedor focado em criar jogos bem estruturados, com código limpo e aplicando boas práticas como SOLID & arquitetura robusta.</p>
+    <main>
+      <section class="hero">
+        <div class="hero-left">
+          <h2 style="margin:0 0 8px 0">Games & Technical Case Studies</h2>
+          <p style="margin:0;color:var(--muted);line-height:1.45">
+            Projects focused on clean architecture, SOLID principles and robust Unity systems.
+            Each game page contains technical notes, highlighted code and a link to the playable build on itch.io.
+          </p>
+
+          <div class="cta">
+            <a class="btn" href="#games">See games</a>
+            <a class="btn" href="#about">Read case studies</a>
+          </div>
         </div>
 
-        <!-- PROJECTS -->
-        <h2 class="section-title">Meus Jogos</h2>
+        <div class="hero-right">
+          <div style="width:160px;height:100px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);display:grid;place-items:center;font-weight:600;color:var(--muted)">
+            Demo
+          </div>
+        </div>
+      </section>
 
-        <div class="projects">
+      <section id="games">
+        <h3 style="margin:0 0 12px 0">Games</h3>
 
-            <a class="project-card" href="#" target="_blank">
-                <div class="project-title">Jogo 1</div>
-                <p>Descrição rápida do jogo. Clique para ver no itch.io.</p>
-            </a>
+        <div class="games-grid">
+          
+          <article class="card">
+            <div class="thumb">
+              <img src="assets/game1.gif" alt="Game 1 preview" onerror="this.src='assets/fallback.png'">
+            </div>
 
-            <a class="project-card" href="#" target="_blank">
-                <div class="project-title">Jogo 2</div>
-                <p>Descrição rápida do jogo. Clique para ver no itch.io.</p>
-            </a>
+            <div class="meta">
+              <div>
+                <p class="title">Platformer: Lifted</p>
+                <p class="subtitle">2D platformer — focus on movement systems</p>
+              </div>
+              <div class="pill">Unity 6</div>
+            </div>
 
-            <a class="project-card" href="#" target="_blank">
-                <div class="project-title">Jogo 3</div>
-                <p>Descrição rápida do jogo. Clique para ver no itch.io.</p>
-            </a>
+            <p style="margin:8px 0 0 0;color:var(--muted);font-size:13px;line-height:1.35">
+              Clean SRP movement, Rigidbody2D MovePosition and platform attachment system to avoid jitter.
+            </p>
+
+            <div class="card-footer">
+              <a class="play-btn" href="https://vordock.itch.io/lifted" target="_blank" rel="noopener">Play on itch.io</a>
+              <a class="btn" href="games/platformer-lifted.html">Read case study</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb">
+              <img src="assets/game2.gif" alt="Game 2 preview" onerror="this.src='assets/fallback.png'">
+            </div>
+
+            <div class="meta">
+              <div>
+                <p class="title">Rogue Shooter</p>
+                <p class="subtitle">Top-down shooter with pooling</p>
+              </div>
+              <div class="pill">Unity 6</div>
+            </div>
+
+            <p style="margin:8px 0 0 0;color:var(--muted);font-size:13px;line-height:1.35">
+              Object pooling, event bus and decoupled input system.
+            </p>
+
+            <div class="card-footer">
+              <a class="play-btn" href="https://vordock.itch.io/rogue-shooter" target="_blank" rel="noopener">Play on itch.io</a>
+              <a class="btn" href="games/rogue-shooter.html">Read case study</a>
+            </div>
+          </article>
 
         </div>
+      </section>
 
-        <footer>
-            © 2025 — Criado por Saulo Dias
-        </footer>
+      <section id="about" style="margin-top:14px">
+        <h3 style="margin:0 0 12px 0">About</h3>
+        <div style="background:var(--glass); padding:16px; border-radius:12px">
+          <p style="margin:0;color:var(--muted);line-height:1.5">
+            Hi — I'm Saulo Dias. I focus on building robust gameplay systems in Unity with emphasis on architecture,
+            performance and maintainability. I show key code excerpts and explain design decisions in each case study.
+          </p>
+        </div>
+      </section>
+    </main>
 
-    </div>
+    <footer>
+      © <span id="year"></span> Saulo Dias — <span style="color:var(--muted)">Unity Game Programmer</span>
+    </footer>
+  </div>
 
-    <!-- JS externo com versionamento -->
-    <script src="script.js?v=1.0.0"></script>
+  <!-- External JS -->
+  <script src="script.js?v=1.0.0"></script>
 </body>
 </html>
