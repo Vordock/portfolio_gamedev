@@ -218,6 +218,20 @@ footer {
   .hero-right { display: none; }
 }
 
+<<<<<<< HEAD
+=======
+/* Hero */
+.hero-title {
+  margin: 0 0 8px 0;
+}
+
+.hero-text {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+>>>>>>> d5b11f0f24b1d690b99bbf05f53ea413e5ce1114
 /* Section titles */
 .section-title {
   margin: 0 0 12px 0;
@@ -226,7 +240,10 @@ footer {
 /* About section */
 #about {
   margin-top: 14px;
+<<<<<<< HEAD
   margin-bottom: 14px;
+=======
+>>>>>>> d5b11f0f24b1d690b99bbf05f53ea413e5ce1114
 }
 
 /* Muted text */
