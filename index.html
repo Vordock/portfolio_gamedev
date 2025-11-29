@@ -11,345 +11,327 @@
 
     <meta name="description"
       content="Saulo Dias — Game Programmer. Portfolio focused on Unity, SOLID, and clean architecture.">
+
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
       rel="stylesheet">
 
-    <style>
-    :root {
-      --bg-1: #0f1724;
-      --bg-2: #0b2545;
-      --accent: #7dd3fc;
-      --card: rgba(255,255,255,0.04);
-      --glass: rgba(255,255,255,0.03);
-      --muted: rgba(255,255,255,0.7);
-      --radius: 14px;
-      --max-width: 1100px;
-    }
-
-    body {
-      margin: 0;
-      font-family: "Inter", system-ui;
-      color: #e6f0ff;
-      background:
-        radial-gradient(1200px 600px at 10% 10%, rgba(125,211,252,0.06), transparent 8%),
-        radial-gradient(900px 400px at 90% 90%, rgba(125,211,252,0.03), transparent 6%),
-        linear-gradient(180deg, var(--bg-1), var(--bg-2));
-      padding: 48px 24px;
-      display: flex;
-      justify-content: center;
-    }
-
-    .site { width: 100%; max-width: var(--max-width); }
-
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 28px;
-    }
-
-    .brand { display: flex; gap: 14px; align-items: center; }
-
-    .logo {
-      width: 125px;
-      height: 125px;
-      border-radius: 12px;
-      background: url("./assets/foto.jpg") center/cover no-repeat;
-      box-shadow: 0 6px 18px rgba(2,6,23,0.6);
-      margin-right: 15px;
-    }
-
-    nav { display: flex; gap: 12px; }
-
-    .btn {
-      background: transparent;
-      border: 1px solid rgba(255,255,255,0.08);
-      padding: 10px 14px;
-      border-radius: 10px;
-      color: inherit;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 13px;
-      transition: 0.18s;
-    }
-
-    .btn:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(2,6,23,0.6); }
-
-    #about { margin: 16px 0; }
-    .about-box {
-      background: var(--glass);
-      padding: 16px;
-      border-radius: 12px;
-      color: var(--muted);
-    }
-
-    .games-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 18px;
-    }
-
-    .card {
-      background: linear-gradient(180deg, var(--card), transparent);
-      border-radius: var(--radius);
-      padding: 16px;
-      border: 1px solid rgba(255,255,255,0.05);
-      box-shadow: 0 8px 30px rgba(2,6,23,0.6);
-
-      display: grid;
-      grid-template-columns: 1fr 260px;
-      gap: 20px;
-      align-items: stretch;
-    }
-
-    .card-header {
-      display: flex;
-      align-items: flex-start;
-      grid-column: 1;
-    }
-
-    .thumb-img {
-      grid-column: 2;
-      grid-row: 1 / span 4;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 10px;
-      box-shadow: 0 6px 20px rgba(2,6,23,0.5);
-    }
-
-    .meta { display: flex; justify-content: space-between; }
-    .title { font-weight: 700; }
-    .subtitle { color: var(--muted); font-size: 13px; }
-
-    .desc { 
-      grid-column: 1;
-      margin: 10px 0;
-      font-size: 14px;
-      color: var(--muted);
-    }
-
-    .card-footer {
-      grid-column: 1;
-      display: flex;
-      gap: 12px;
-      margin-top: auto;
-    }
-
-    .play-btn {
-      background: linear-gradient(90deg, var(--accent), #60a5fa);
-      padding: 9px 12px;
-      border-radius: 10px;
-      color: #012034;
-      font-weight: 700;
-      text-decoration: none;
-    }
-
-    /* CODING DETAILS */
-    .coding-detail {
-      grid-column: 1;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.35s ease;
-      background: rgb(37, 37, 37);
-      box-shadow: 0 6px 20px rgba(2,6,23,0.5);
-      padding: 0 10px;
-      border-radius: 10px;
-      margin-top: 6px;
-    }
-
-    .coding-text { 
-      padding: 14px 6px;
-      color: var(--muted); 
-    }
-
-    footer {
-      margin-top: 32px;
-      text-align: center;
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    @media (max-width: 700px) {
-      header { flex-direction: column; gap: 12px; align-items: flex-start; }
-
-      .card { grid-template-columns: 1fr; }
-
-      .thumb-img {
-        grid-column: 1;
-        grid-row: auto;
-        width: 390;
-        height: 300px;
-      }
-    }
-    </style>
+    <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
     <div class="site">
 
+      <!-- HEADER -->
       <header>
         <div class="brand">
           <div class="logo"></div>
           <div>
             <h1>Saulo Dias - Game Developer</h1>
-            <p class="lead">Unity dev • Clean code • Platforming & systems</p>
+            <p class="lead">Unity Development • Smart Game Solutions</p>
           </div>
         </div>
+
         <nav>
-          <a class="btn" href="https://github.com/vordock"
+          <a class="btn_git" href="https://github.com/vordock"
             target="_blank">GitHub</a>
         </nav>
       </header>
 
       <main>
+
+        <!-- ABOUT -->
         <section id="about">
-          <h3>About</h3>
+          <!-- <h2>About</h2> -->
           <div class="about-box">
             I'm Saulo Dias. I build gameplay systems in Unity with strong focus
-            on architecture, performance and maintainability.
+            in finding the best solutions for the game.
           </div>
         </section>
 
+        <!-- GAMES -->
         <section id="games">
-          <h3>Games</h3>
+          <h1 class="hard-title">Games</h1>
 
           <div class="games-grid">
 
-            <!-- ========================= GAME 1 ========================= -->
+            <!-- CARD 1 - FOX VALLEY -->
             <article class="card">
-
               <div class="card-header">
                 <div class="meta">
-                  <div>
-                    <p class="title">Fox Valley</p>
-                    <p class="subtitle">2D platformer — clean SRP movement</p>
-                  </div>
+                  <p class="title">Fox Valley</p>
+                  <p class="subtitle">2D platformer adventure</p>
                 </div>
+                <a class="play-btn header-play-btn"
+                  href="https://vordock.itch.io/fox_valley"
+                  target="_blank">Play</a>
               </div>
 
               <p class="desc">
                 The project presents feedback showing how to play it according
-                to the type of input detected, with interaction, inventory
-                system
-                and enemies with different behavior.
+                to the type of input detected,
+                with interaction, inventory system and enemies with different
+                behavior.
               </p>
 
-              <div class="card-footer">
-                <a class="play-btn" href="https://vordock.itch.io/fox_valley"
-                  target="_blank">Play</a>
-                <button class="btn expand-btn" data-target=".fox-details">Coding
-                  Details</button>
+              <div class="thumb-wrapper">
+                <img class="thumb-img" src="./assets/fox_valley_img.png"
+                  alt="Fox Valley screenshot">
               </div>
 
-              <img class="thumb-img" src="./assets/fox_valley_img.png"
-                alt="Fox Valley screenshot">
-
-              <!-- 3 DETAILS -->
-              <div class="coding-detail fox-details">
-                <div class="coding-text">// Movement code example</div>
+              <div class="coding-details-wrapper">
+                <div class="coding-detail">
+                  <button class="coding-text open-modal"
+                    data-modal="modal-fox-interaction">Interaction
+                    Script</button>
+                </div>
+                <div class="coding-detail">
+                  <button class="coding-text open-modal"
+                    data-modal="modal-fox-enemy">Enemy Script</button>
+                </div>
+                <div class="coding-detail">
+                  <button class="coding-text open-modal"
+                    data-modal="modal-fox-events">Event Script</button>
+                </div>
               </div>
-
-              <div class="coding-detail fox-details">
-                <div class="coding-text">// Enemy AI example</div>
-              </div>
-
-              <div class="coding-detail fox-details">
-                <div class="coding-text">// Item system example</div>
-              </div>
-
             </article>
 
-            <!-- ========================= GAME 2 ========================= -->
+            <!-- CARD 2 - GAME TWO -->
             <article class="card">
-
               <div class="card-header">
                 <div class="meta">
-                  <div>
-                    <p class="title">Game Two</p>
-                    <p class="subtitle">Systems & Architecture</p>
-                  </div>
+                  <p class="title">Game Two</p>
+                  <p class="subtitle">Systems & Architecture</p>
                 </div>
+                <a class="play-btn header-play-btn" href="#"
+                  target="_blank">Play</a>
               </div>
 
               <p class="desc">Second project description...</p>
 
-              <div class="card-footer">
-                <a class="play-btn" href="#" target="_blank">Play</a>
-                <button class="btn expand-btn"
-                  data-target=".game2-details">Coding Details</button>
+              <div class="thumb-wrapper">
+                <img class="thumb-img" src="./assets/game2.png"
+                  alt="Game Two screenshot">
               </div>
 
-              <img class="thumb-img" src="./assets/game2.png"
-                alt="Game Two screenshot">
-
-              <div class="coding-detail game2-details"><div
-                  class="coding-text">// Detail A</div></div>
-              <div class="coding-detail game2-details"><div
-                  class="coding-text">// Detail B</div></div>
-              <div class="coding-detail game2-details"><div
-                  class="coding-text">// Detail C</div></div>
+              <div class="coding-details-wrapper">
+                <div class="coding-detail">
+                  <button class="coding-text open-modal"
+                    data-modal="modal-g2-gameplay">Gameplay Script</button>
+                </div>
+                <div class="coding-detail">
+                  <button class="coding-text open-modal"
+                    data-modal="modal-g2-detailb">Detail B</button>
+                </div>
+                <div class="coding-detail">
+                  <button class="coding-text open-modal"
+                    data-modal="modal-g2-detailc">Detail C</button>
+                </div>
+              </div>
             </article>
 
-            <!-- ========================= GAME 3 ========================= -->
+            <!-- CARD 3 - GAME THREE -->
             <article class="card">
-
               <div class="card-header">
                 <div class="meta">
-                  <div>
-                    <p class="title">Game Three</p>
-                    <p class="subtitle">Polish & Feel</p>
-                  </div>
+                  <p class="title">Game Three</p>
+                  <p class="subtitle">Polish & Feel</p>
                 </div>
+                <a class="play-btn header-play-btn" href="#"
+                  target="_blank">Play</a>
               </div>
 
               <p class="desc">Third project description...</p>
 
-              <div class="card-footer">
-                <a class="play-btn" href="#" target="_blank">Play</a>
-                <button class="btn expand-btn"
-                  data-target=".game3-details">Coding Details</button>
+              <div class="thumb-wrapper">
+                <img class="thumb-img" src="./assets/game3.png"
+                  alt="Game Three screenshot">
               </div>
 
-              <img class="thumb-img" src="./assets/game3.png"
-                alt="Game Three screenshot">
-
-              <div class="coding-detail game3-details"><div
-                  class="coding-text">// Detail 1</div></div>
-              <div class="coding-detail game3-details"><div
-                  class="coding-text">// Detail 2</div></div>
-              <div class="coding-detail game3-details"><div
-                  class="coding-text">// Detail 3</div></div>
-
+              <div class="coding-details-wrapper">
+                <div class="coding-detail">
+                  <button class="coding-text open-modal"
+                    data-modal="modal-g3-polish">Polish Script</button>
+                </div>
+                <div class="coding-detail">
+                  <button class="coding-text open-modal"
+                    data-modal="modal-g3-detail2">Detail 2</button>
+                </div>
+                <div class="coding-detail">
+                  <button class="coding-text open-modal"
+                    data-modal="modal-g3-detail3">Detail 3</button>
+                </div>
+              </div>
             </article>
 
           </div>
         </section>
 
+        <!-- MODALS -->
+        <div id="modal-fox-interaction" class="modal-overlay">
+          <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>Fox Valley — Interaction Script</h2>
+            <pre><code class="language-csharp">
+public interface IInteractable
+{
+    void StartInteraction();
+    void FinishInteraction();
+}
+
+namespace vordock
+{
+    public class PlayerInteraction : MonoBehaviour
+    {
+        public GameObject objectToInteract;
+        private IInteractable _currentInteractable;
+
+        public void Interact()
+        {
+            _currentInteractable?.StartInteraction();
+        }
+
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.TryGetComponent(out IInteractable interactable))
+            {
+                _currentInteractable = interactable;
+                objectToInteract = other.gameObject;
+            }
+        }
+
+        private void OnTriggerExit2D(Collider2D other)
+        {
+            if (other.TryGetComponent(out IInteractable interactable))
+            {
+                if (interactable == _currentInteractable)
+                {
+                    _currentInteractable = null;
+                    objectToInteract = null;
+                }
+            }
+        }
+    }
+}
+    </code></pre>
+          </div>
+        </div>
+
+        <div id="modal-fox-enemy" class="modal-overlay">
+          <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>Fox Valley — Enemy Script</h2>
+            <pre><code class="language-csharp">
+// Enemy script here
+    </code></pre>
+          </div>
+        </div>
+
+        <div id="modal-fox-events" class="modal-overlay">
+          <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>Fox Valley — Event Script</h2>
+            <pre><code class="language-csharp">
+// Event script here
+    </code></pre>
+          </div>
+        </div>
+
+        <!-- ========================= -->
+        <!-- GAME TWO MODALS -->
+        <!-- ========================= -->
+
+        <div id="modal-g2-gameplay" class="modal-overlay">
+          <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>Game Two — Gameplay Script</h2>
+            <pre><code class="language-csharp">
+// Code here
+    </code></pre>
+          </div>
+        </div>
+
+        <div id="modal-g2-detailb" class="modal-overlay">
+          <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>Game Two — Detail B</h2>
+            <pre><code class="language-csharp">
+// Code B
+    </code></pre>
+          </div>
+        </div>
+
+        <div id="modal-g2-detailc" class="modal-overlay">
+          <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>Game Two — Detail C</h2>
+            <pre><code class="language-csharp">
+// Code C
+    </code></pre>
+          </div>
+        </div>
+
+        <!-- ========================= -->
+        <!-- GAME THREE MODALS -->
+        <!-- ========================= -->
+
+        <div id="modal-g3-polish" class="modal-overlay">
+          <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>Game Three — Polish Script</h2>
+            <pre><code class="language-csharp">
+// Code here
+    </code></pre>
+          </div>
+        </div>
+
+        <div id="modal-g3-detail2" class="modal-overlay">
+          <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>Game Three — Detail 2</h2>
+            <pre><code class="language-csharp">
+// Code here
+    </code></pre>
+          </div>
+        </div>
+
+        <div id="modal-g3-detail3" class="modal-overlay">
+          <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>Game Three — Detail 3</h2>
+            <pre><code class="language-csharp">
+// Code here
+    </code></pre>
+          </div>
+        </div>
+
       </main>
 
-      <footer>
-        © <span id="year"></span> Saulo Dias — Unity Game Developer
+      <footer class="footer">
+        <p>© <span id="year"></span> Saulo Dias — Unity Game Developer</p>
       </footer>
+
     </div>
 
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
 
-      // Expand multiple coding details per game
-      document.querySelectorAll('.expand-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-          const selector = btn.dataset.target;
-          const details = document.querySelectorAll(selector);
+      document.querySelectorAll(".open-modal").forEach(el => {
+        el.addEventListener("click", () => {
+          const modalId = el.getAttribute("data-modal");
+          document.getElementById(modalId).style.display = "flex";
+        });
+      });
 
-          details.forEach(box => {
-            if (box.style.maxHeight) {
-              box.style.maxHeight = null;
-            } else {
-              box.style.maxHeight = box.scrollHeight + "px";
-            }
-          });
+      document.querySelectorAll(".modal-close").forEach(btn => {
+        btn.addEventListener("click", () => {
+          btn.closest(".modal-overlay").style.display = "none";
+        });
+      });
+
+      document.querySelectorAll(".modal-overlay").forEach(ov => {
+        ov.addEventListener("click", (e) => {
+          if (e.target === ov) ov.style.display = "none";
         });
       });
     </script>
